@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a /0x00-shell_basics /holberton-system_engineering-devops/0x00-shell basics /boot 
+ls -a /0x00-shell_basics /holberton-system_engineering-devops/0x00-shell_basics /boot 
