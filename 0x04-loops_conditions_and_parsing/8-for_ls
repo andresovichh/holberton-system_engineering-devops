@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# list after "-"
+
+cut -d '-' -f1 ../0x04-loops_conditions_and_parsing
