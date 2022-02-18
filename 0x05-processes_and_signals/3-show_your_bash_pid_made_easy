@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # displays the PID,  contain bash
 
-pstree -p | grep bash
+pgrep -l bash
