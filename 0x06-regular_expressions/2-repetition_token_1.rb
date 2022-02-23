@@ -1,3 +1,3 @@
 #!/usr/bin/env ruby
-
-puts ARGV[0].scan(/hb*tn/).join
+#This is a comment
+puts ARGV[0].scan(/hb?tn/).join
