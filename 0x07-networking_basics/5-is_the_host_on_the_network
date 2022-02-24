@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# ping what is passed as argument
+# https://leonardcucos.com/how-to-make-a-ping-sweep-linux-script/
+
+ping -c5 "$1"; 
