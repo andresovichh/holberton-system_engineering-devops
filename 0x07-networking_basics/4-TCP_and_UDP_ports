@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# script that listens to ports and pids https://www.tecmint.com/find-listening-ports-linux/
+
+netstat -lntup
