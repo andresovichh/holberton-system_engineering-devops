@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # show attached ips
 # https://stackoverflow.com/questions/13322485/how-to-get-the-primary-ip-address-of-the-local-machine-on-linux-and-os-x
-ifconfig | awk '/inet/ {print $2}' | cut -d : -f 2
+# ifconfig | awk '/inet addr/ {print $2}' | cut -d : -f 2
 # ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'
+ifconfig | grep 'inet' | cut -d: -f 2 | awk '{print $2}'
