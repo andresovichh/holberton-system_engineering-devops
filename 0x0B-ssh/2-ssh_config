@@ -1,7 +1,6 @@
 #!/usr/bin/env bash
 # https://phoenixnap.com/kb/ssh-permission-denied-publickey#:~:text=If%20you%20want%20to%20use,login%20in%20the%20sshd_config%20file.&text=In%20the%20file%2C%20find%20the,disable%20it%20by%20adding%20no%20.
-Host firstholb
 HostName 34.74.126.87
 User ubuntu
-IdentityFile ~/.ssh/shchool.pub
+IdentityFile ~/.ssh/shchool
 PasswordAuthentication no
