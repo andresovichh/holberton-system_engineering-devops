@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# this is to create a 4096 key
+# https://www.ssh.com/academy/ssh/keygen
+ssh-keygen -f ~/.ssh/school -b 4096 -N 'betty' 
