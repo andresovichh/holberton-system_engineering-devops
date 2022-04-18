@@ -1,5 +1,7 @@
 # this installs a package
 package { 'puppet-lint':
-  command => '/bin/gem install puppet-lint -v 2.5.0',
+  ensure   => '2.5.0',
+  source   => 'http://rubygems.org/gems/',
+  provider => 'gem',
 }
 
