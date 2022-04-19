@@ -3,11 +3,11 @@
 
 file_line { 'connect using key':
   path    => '~/etc/ssh/.ssh/config',
-  line    => 'IdentityFile ~/.ssh/shchool',
+  line    => '    IdentityFile ~/.ssh/shchool',
   replace => true,
 }->
 file_line { 'do not request password':
   path    => '~/etc/ssh/.ssh/config',
-  line    => 'PasswordAuthentication no',
+  line    => '    PasswordAuthentication no',
   replace => true,
 }
