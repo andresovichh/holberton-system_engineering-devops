@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# you first log into the container you created using docker at
+# docker run -p 8080:80 -d -it holbertonschool/265-0, 
+# then you google where apache gets the html from,
+# and it is in var/www/html/index.html, and you vi into it
+# and find that you can just get the apache service running and it will
+# serve the html file.
+# https://linuxize.com/post/start-stop-restart-apache/
+service apache2 start
