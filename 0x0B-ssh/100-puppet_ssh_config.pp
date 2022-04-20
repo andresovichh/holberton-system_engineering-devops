@@ -1,15 +1,14 @@
+#!/usr/bin/env bash
 # a file to use private key and no password
 
-file { '/Users/andreshenderson/.ssh/config':
-ensure => present,
-}
-file_line { 'connect using key':
-  path    => '/Users/andreshenderson/.ssh/config',
-  line    => 'IdentityFile ~/.ssh/shchool',
+file_line { 'which private key':
+  path    => '/etc/ssh/ssh_config',
+  line    => '    IdentityFile ~/.ssh/school',
   replace => true,
 }
-file_line { 'do not request password':
-  path    => '/Users/andreshenderson/.ssh/config',
-  line    => 'PasswordAuthentication no',
+
+file_line { 'disable pass authentication':
+  path    => '/etc/ssh/ssh_config',
+  line    => '    PasswordAuthentication no',
   replace => true,
 }
