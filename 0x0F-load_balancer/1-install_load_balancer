@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # this is installs haproxy and sets it to roundrobin 
 sudo apt-get update
-sudo apt-get install haproxy
+sudo apt-get install haproxy -y
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_default_conf.cfg
 echo "
 backend web-backend
@@ -14,4 +14,5 @@ frontend http
     mode http
     default_backend web-backend
     " | sudo tee -a /etc/haproxy/haproxy.cfg
+
 sudo service haproxy restart
