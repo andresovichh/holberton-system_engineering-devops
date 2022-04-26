@@ -3,7 +3,7 @@
 sudo apt-get update
 sudo apt-get install --no-install-recommends software-properties-common
 sudo add-apt-repository ppa:vbernat/haproxy-2.0
-sudo apt-get install haproxy=2.0.\* -y
+sudo apt-get install haproxy=2.0.\*
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_default_conf.cfg
 echo "
 backend web-backend
