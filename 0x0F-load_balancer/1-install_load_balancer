@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # this is installs haproxy and sets it to roundrobin 
-sudo apt-get update
-sudo apt-get install haproxy=2.0.\*
-sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy_default_conf.cfg
+sudo apt-get -y update
+sudo apt-get -y install software-properties-common
+sudo add-apt-repository -y ppa:vbernat/haproxy-2.0
+sudo apt-get -y update
+sudo apt-get -y install haproxy=2.0.\*
 echo "
 frontend http_front
     bind *:80
