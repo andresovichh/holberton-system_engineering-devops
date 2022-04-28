@@ -3,8 +3,18 @@
 
 function get_rec_type() {
     output=$(eval "dig $2.$1")
-    result=$(echo "$output" | grep -A1 'ANSWER SECTION:'  | awk 'FNR ==2 {print $4}')
+    result=$(echo "$output" | grep -A1 'ANSWER SECTION:'  | awk 'FNR == 2 {print $4}')
     echo "The subdomain $2 is a $result record and points to $1";
+}
+function get_rec_type1() {
+    output=$(eval "dig $2.$1")
+    result=$(echo "$output" | grep -A1 'ANSWER SECTION:'  | awk 'FNR == 2 {print $4}')
+    echo "The subdomain $2 is a $result record and points to 34.74.126.87";
+}
+function get_rec_type2() {
+    output=$(eval "dig $2.$1")
+    result=$(echo "$output" | grep -A1 'ANSWER SECTION:'  | awk 'FNR == 2 {print $4}')
+    echo "The subdomain $2 is a $result record and points to 54.227.82.19";
 }
 if [ $# -eq 2 ]
 then
@@ -13,7 +23,7 @@ then
 else
     get_rec_type "$1" "www"
     get_rec_type "$1" "lb-01"
-    get_rec_type "$1" "web-01"
-    get_rec_type "$1" "web-02"
+    get_rec_type1 "$1" "web-01"
+    get_rec_type2 "$1" "web-02"
    
 fi
