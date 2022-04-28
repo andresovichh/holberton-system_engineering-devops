@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# ssl to my website
+
+function get_rec_type() {
+    output=$(eval "dig $2.$1")
+    result=$(echo "$output" | grep -A1 'ANSWER SECTION:'  | awk 'FNR ==2 {print $4}')
+    echo "The subdomain $2 is a $result record and points to $1";
+}
+if [ $# -eq 2 ]
+then
+
+    get_rec_type "$1" "$2"
+else
+    get_rec_type "$1" "www"
+    get_rec_type "$1" "lb-01"
+    get_rec_type "$1" "web-01"
+    get_rec_type "$1" "web-02"
+   
+fi
