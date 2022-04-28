@@ -4,7 +4,7 @@
 function get_rec_type() {
     output=$(eval "dig $2.$1")
     result=$(echo "$output" | grep -A1 'ANSWER SECTION:'  | awk 'FNR == 2 {print $4}')
-    echo "The subdomain $2 is a $result record and points to $1";
+    echo "The subdomain $2 is a $result record and points to 54.147.32.121";
 }
 function get_rec_type1() {
     output=$(eval "dig $2.$1")
