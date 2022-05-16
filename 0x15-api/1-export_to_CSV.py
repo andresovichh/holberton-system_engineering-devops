@@ -2,7 +2,7 @@
 """
 This is a module that
 gathers data from an API
-and does some stuff with it 
+and does some stuff with it
 """
 
 import csv
@@ -19,8 +19,6 @@ if __name__ == '__main__':
     if username is not None:
         t = requests.get("https://jsonplaceholder.typicode.com/users/{}/t"
                          .format(argv[1])).json()
-    # t = json.loads(req.text)
-    # print(tasks)
     with open("{}.csv".format(argv[1]), "w", newline="") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in t:
