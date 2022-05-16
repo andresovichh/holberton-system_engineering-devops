@@ -1,13 +1,8 @@
 #!/usr/bin/python3
-"""
-This is a module that
-gathers data from an API
-and does some stuff with it
-"""
+"""Exports results to a csv"""
 
 import csv
 import json
-import pandas as pd
 import requests
 from sys import argv
 
