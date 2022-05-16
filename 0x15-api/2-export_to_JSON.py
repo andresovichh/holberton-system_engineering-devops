@@ -13,14 +13,12 @@ if __name__ == '__main__':
     t = requests.get('https://jsonplaceholder.typicode.com/users/{}/todos'
                      .format(argv[1]))
     t = t.json()
-
-
     with open("{}.json".format(argv[1]), "w") as f:
         tasks = []
 
         for task in t:
             tasks.append({"task": task.get('title'),
                          "completed": task.get('completed'),
-                        "username": r.get('username')})
+                          "username": r.get('username')})
         final = {"{}".format(argv[1]): tasks}
         json.dump(final, f)
