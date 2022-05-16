@@ -16,11 +16,12 @@ if __name__ == '__main__':
         todos = requests.get("https://jsonplaceholder.typicode.com/users/{}/todos"
                            .format(argv[1])).json()
     # todos = json.loads(req.text)
-    tasks = len(todos)
     # print(tasks)
     with open("{}.csv".format(argv[1]), "w", newline="") as f:
         writer = csv.writer(f, quoting=csv.QUOTE_ALL)
         for task in todos:
-            writer.writerow([argv[1], username,
+            writer.writerow([argv[1],
+                            username,
                             task.get('completed'),
                             task.get('title')])
+    print(len(todos))
