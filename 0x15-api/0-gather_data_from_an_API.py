@@ -6,6 +6,7 @@ from sys import argv
 import json
 
 if __name__ == '__main__':
+    """ this is an import"""
     url = 'https://jsonplaceholder.typicode.com/users/'
     r = requests.get("{}/{}".format(url, argv[1]))
     name = r.json().get('name')
