@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 """ This is a module that gathers data from an API """
 
+import json
 import requests
 from sys import argv
-import json
 
 if __name__ == '__main__':
     """ this is an import"""
