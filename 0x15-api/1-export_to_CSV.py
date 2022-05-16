@@ -2,7 +2,8 @@
 """
 This is a module that
 gathers data from an API
-and does some stuff with it """
+and does some stuff with it 
+"""
 
 import csv
 import json
