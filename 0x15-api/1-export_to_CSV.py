@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """ This is a module that gathers data from an API """
 
+import csv
+import json
+import pandas as pd
 import requests
 from sys import argv
-import json
-import csv
-import pandas as pd
 
 if __name__ == '__main__':
     url = 'https://jsonplaceholder.typicode.com/users/'
@@ -24,4 +24,3 @@ if __name__ == '__main__':
                             username,
                             task.get('completed'),
                             task.get('title')])
-    print(len(t))
