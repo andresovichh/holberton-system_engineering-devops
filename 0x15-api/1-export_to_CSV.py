@@ -8,6 +8,8 @@ import requests
 from sys import argv
 
 if __name__ == '__main__':
+    """ this is an import module that
+    imports modules from the API """
     url = 'https://jsonplaceholder.typicode.com/users/'
     r = requests.get("{}/{}".format(url, argv[1]))
     username = r.json().get('username')
