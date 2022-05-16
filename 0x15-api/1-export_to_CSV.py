@@ -4,6 +4,8 @@
 import requests
 from sys import argv
 import json
+import csv
+import pandas as pd
 
 if __name__ == '__main__':
     url = 'https://jsonplaceholder.typicode.com/users/'
@@ -15,17 +17,9 @@ if __name__ == '__main__':
     todos = json.loads(req.text)
     tasks = len(todos)
     # print(tasks)
-    count = 0
-    incompl = 0
-    task_ist = []
-    for task in todos:
-        if task.get('completed') is True:
-            count += 1
-            task_ist.append(task)
-        else:
-            incompl += 1
-    print("Employee {} is done with tasks({}/{}):".
-          format(name, count, tasks))
-
-    for task in task_ist:
-        print("\t", task.get('title'))
+    with open("{}.csv".format(argv[1]), "w", newline="") as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL)
+        for task in todos:
+            writer.writerow([argv[1], r.json().get('username'),
+                             task.get('completed'),
+                             task.get('title')])
