@@ -1,13 +1,15 @@
 #!/usr/bin/python3
-""" This is a module that gathers data from an API """
+""" This is a module that gathers data from an API 
+and exports it to a CSV file """
 
+import csv
+import json
+import pandas as pd
 import requests
 from sys import argv
-import json
-import csv
-import pandas as pd
 
 if __name__ == '__main__':
+    """ adding some documentation"""
     url = 'https://jsonplaceholder.typicode.com/users/'
     r = requests.get("{}/{}".format(url, argv[1]))
     name = r.json().get('name')
