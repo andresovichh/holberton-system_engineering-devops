@@ -12,8 +12,8 @@ if __name__ == '__main__':
 
     req = requests.get("https://jsonplaceholder.typicode.com/users/{}/todos"
                        .format(argv[1]))
-    todos = req.json()
-    user = rq.json()
+    todos = json.loads(req.text)
+    user = json.loads(rq.text)
 
     with open("{}.json".format(argv[1]), "w") as f:
         tasks = []
@@ -21,6 +21,6 @@ if __name__ == '__main__':
         for task in todos:
             tasks.append({"task": task.get('title'),
                          "completed": task.get('completed'),
-                         "username": user.get('username')})
+                        "username": user.get('username')})
         final = {"{}".format(argv[1]): tasks}
         json.dump(final, f)
