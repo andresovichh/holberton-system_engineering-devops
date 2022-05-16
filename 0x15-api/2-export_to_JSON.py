@@ -8,10 +8,7 @@ from sys import argv
 
 if __name__ == '__main__':
     url = 'https://jsonplaceholder.typicode.com/users/'
-    rq = requests.get("{}/{}".format(url, argv[1]))
-    name = rq.json().get('name')
-    r = json.loads(rq.text)
-    rj = json.dumps(r)
+    rq = requests.get("{}{}".format(url, argv[1]))
 
     req = requests.get("https://jsonplaceholder.typicode.com/users/{}/todos"
                        .format(argv[1]))
