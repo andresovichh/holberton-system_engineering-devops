@@ -2,8 +2,8 @@
 """this is a module that gets the number of
 subscribers of a subreddit"""
 
-import requests
 from pprint import pprint
+import requests
 
 
 def number_of_subscribers(subreddit):
