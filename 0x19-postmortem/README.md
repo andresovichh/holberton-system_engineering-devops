@@ -8,6 +8,7 @@ Supporting data:
 Customer Impact: Customers were unable to retrieve sales data. Databases were not accessible, sales logging was unaffected.
 Incident Response Analysis: The incident was aknowledged within 30 minutes of begining due to traffic monitoring using datadog. Customers called for support whilst we were working on solution. 
 Escalation was early and appropriate.
+Issue originated at small number of file descriptors allowed for the service.
 Solution was tested using postman and the service was operational.
 Post-Incident Analysis: Further and more thorough tests should be performed on the API. 
 Request load should be tested against the service.
