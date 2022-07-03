@@ -3,6 +3,9 @@
 ssh -i ~/.ssh/school ubuntu@34.74.126.87
 #!/usr/bin/env bash
 # this is a script that connects to a server using key
+# load balancer
 ssh -i ~/.ssh/school ubuntu@34.74.126.87
+# web server
 ssh -i ~/.ssh/school ubuntu@54.227.82.19
+# db server
 ssh -i ~/.ssh/aws ubuntu@44.204.28.37
