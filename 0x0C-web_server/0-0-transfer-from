@@ -1,0 +1,1 @@
+scp -r -o "StrictHostKeyChecking=no" -i ~/.ssh/school ubuntu@54.227.82.19:/home/ubuntu/site-content /home/andres/Desktop/
